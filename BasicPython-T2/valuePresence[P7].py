@@ -3,7 +3,7 @@
 @Date: 2024-07-10 
 @Last Modified by: Suresh
 @Last Modified: 2024-07-11 
-@Title : Python program for calender
+@Title : Python program to checking the element present in the both lists
 '''
 
 def major(v1,v2):
