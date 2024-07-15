@@ -3,7 +3,7 @@
 @Date: 2024-07-10 
 @Last Modified by: Suresh
 @Last Modified: 2024-07-11 
-@Title : Access Environment Variables
+@Title : Reversing the frist and last name
 '''
 
 def fristAndLast():
