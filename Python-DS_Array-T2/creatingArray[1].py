@@ -9,6 +9,11 @@
 '''
 
 import array
+import loggingfile
+import os
+
+current_scriptname=os.path.basename(__file__)
+logger=loggingfile.logg(current_scriptname)
 
 
 def arrayCreating():
@@ -17,15 +22,24 @@ def arrayCreating():
     Parameter: 
     Return:
     """
-    
+
+    logger.info("Inside arrayCreation method")
     arr=array.array('i',[10, 20, 30, 40, 50])
+    logger.debug(f"Array get created arr = {arr}")
     
-    print("Elements of the array based on index:")
+    print("Array elements based on index:")
     for i in range(len(arr)):
         print(f"Element at index {i} = {arr[i]}")
 
+    logger.info(f"Array is created and printed{arr}")
+    
+
 
 def main():
+    
+    logger.info("Inside main method")
+    logger.info("calling arrayCreation method")
+
     arrayCreating()
    
 
