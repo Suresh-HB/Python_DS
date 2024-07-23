@@ -8,8 +8,16 @@
 
 '''
 
-
+import loggingfile
+import os
 import array
+
+current_scriptname=os.path.basename(__file__)
+
+logger=loggingfile.logg(current_scriptname)
+
+
+
 
 def reverse():
     """
@@ -18,18 +26,24 @@ def reverse():
     Return:
     """   
 
+    logger.info("Inside reverse method")
 
     array_of_integers = array.array('i',[10, 20, 30, 40, 50])
+    logger.debug(f"this is the actual array{array_of_integers}")
 
     print("Original array:--->", array_of_integers)
     
     reversed_array = array_of_integers[::-1]
+    logger.info("reversing the array elements")
+
     array2_integers =reversed_array
 
     print("Reversed array:--->", array2_integers )
+    logger.debug(f"Array elements are reversed{array2_integers}")
 
 
 def main():
+    logger.info("Inside main method")
     reverse()
 
 if __name__ =='__main__':
